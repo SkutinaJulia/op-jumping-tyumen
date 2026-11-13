@@ -244,4 +244,36 @@ body { background: radial-gradient(900px 500px at 90% -10%, rgb(255 46 147 / .22
 .s-vid__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 400px)); justify-content: center; gap: 20px; }
 .s-vid__box { margin: 0; }
 @media (max-width: 700px) { .s-vid__grid { grid-template-columns: 1fr; gap: 14px; } }
+/* правка Ольги: два зала в форме и контактах */
+.s-bar__brand--logo img { display: block; height: 44px; width: 44px; border-radius: 50%; box-shadow: 0 0 0 1px rgb(255 46 147 / .5), 0 0 16px rgb(255 46 147 / .3); }
+@media (max-width: 700px) { .s-bar__brand--logo { overflow: visible !important; } .s-bar__brand--logo img { height: 40px; width: 40px; } }
+/* правка Юли 13.11: шапка не закреплена – уезжает вместе со страницей */
+.s-bar { position: relative !important; top: auto !important; transform: none !important; z-index: 5; }
+.s-hero { overflow: visible !important; } .s-hero__bg { top: -64px !important; }
+/* правка Юли 13.11: заголовок меньше, фото тянется до низа формы – низ фото и формы на одной линии */
+.s-hero h1 { hyphens: none !important; -webkit-hyphens: none !important; }
+@media (min-width: 861px) { .s-hero h1 { font-size: clamp(2rem, 2.6vw, 2.5rem) !important; } .s-hero__photo { flex: 1 1 auto; min-height: 240px !important; margin-bottom: 0 !important; } }
+.s-bar, .s-bar.is-scrolled { box-shadow: none !important; border-bottom: 0 !important; background: transparent !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+.s-vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.s-hero__widget { align-self: start; } .s-hero__widget > .s-widget { flex: 0 0 auto; align-content: start; gap: 14px; }
+/* правка Юли 13.11: на телефоне последнее фото (сертификат) тоже на всю ширину – без одинокого кадра */
+@media (max-width: 860px) { .s-mosaic .m6 { grid-column: 1 / -1; aspect-ratio: 4 / 3; } .s-mosaic .m6 img { object-position: center 55%; } }
+.s-locs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.s-locs .s-chip--row { flex-direction: column; align-items: flex-start; gap: 2px; }
+.s-chip--row b.s-loc { font-weight: 500; font-size: .78rem; color: var(--c-ink-soft); }
+.s-sched { display: inline-block; margin-top: 4px; font-size: .9rem; color: #b6f03a; }
+.s-offer { margin: 0 0 14px; font-size: 1.05rem; font-weight: 600; }
+.s-offer b { margin-left: 6px; font-size: 1.25rem; color: #ff2e93; }
+.s-offer s { margin-left: 4px; color: var(--c-ink-soft); font-weight: 500; }
+/* правка Юли 13.11: онлайн-запись ВК – отдельной плашкой с кнопкой справа, как блок контактов */
+.s-vkcard { display: flex; align-items: center; justify-content: space-between; gap: 18px 28px; margin-top: 28px; padding: 26px 30px; border-radius: var(--r); background: #2e1526; border: 1px solid rgb(255 46 147 / .35); }
+.s-vkcard h3 { margin: 0 0 6px; font-size: 1.2rem; }
+.s-vkcard p { margin: 0; font-size: 1.02rem; line-height: 1.5; color: var(--c-ink); max-width: 560px; }
+.s-vkcard .s-btn { flex: none; }
+@media (max-width: 700px) { .s-vkcard { flex-direction: column; align-items: stretch; padding: 22px 20px; } .s-vkcard .s-btn { text-align: center; } }
+.s-revlinks { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 10px 0 0; font-size: .88rem; }
+.s-revlinks a { color: #b6f03a; }
+.s-banner { max-width: var(--max, 1160px); margin: 48px auto 8px; padding: 0 20px; }
+.s-banner img { display: block; width: 100%; height: auto; border-radius: var(--r); box-shadow: 0 0 0 1px rgb(255 46 147 / .4), 0 16px 44px rgb(255 46 147 / .22); }
+@media (max-width: 700px) { .s-banner { padding: 0 16px; } }
 .s-vid__box video { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r); border: 1px solid rgb(255 46 147 / .5); background: #000; box-shadow: 0 0 40px rgb(255 46 147 / .25); }
